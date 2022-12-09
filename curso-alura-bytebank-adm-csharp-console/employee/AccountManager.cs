@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace curso_alura_bytebank_adm_csharp_console.employee
 {
-    public class Director : AuthenticatedEmployee
+    public class AccountManager : AuthenticatedEmployee
     {
-        public Director(string name, string cpf) : base(name, cpf, 5000)
+        public AccountManager(string name, string cpf) : base(name, cpf, 4000)
         {
         }
 
         public override double GetBonus()
         {
-            return this.salary * 0.5;
+            return this.salary * 0.25;
         }
 
         public override void IncreaseSalary()
         {
-            this.salary *= 1.15;
+            this.salary *= 1.05;
         }
     }
 }
